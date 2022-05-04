@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:moni_africa/utils/extensions.dart';
 import 'package:moni_africa/utils/strings.dart';
 
+import '../../../utils/app_assets.dart';
 import '../../../utils/colors.dart';
 import '../../../utils/styles.dart';
 
@@ -14,13 +16,10 @@ Widget groupSettings (){
           children: [
             Row(
               children: [
-                Container(
+                SizedBox(
                   width: 16,
                   height: 16,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColors.grey
-                  ),
+                  child: SvgPicture.asset(AppAssets.settingsIcon),
                 ),
                 SizedBox(width: 8.w,),
                 Text("Group Settings", style: boldBlack14,),
@@ -44,10 +43,7 @@ Widget groupSettings (){
                 Container(
                   width: 16,
                   height: 16,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColors.darkOrange
-                  ),
+                  child: SvgPicture.asset(AppAssets.penIcon),
                 ),
                 SizedBox(width: 8.w,),
                 Text("Edit Settings", style: regularOrange14,),

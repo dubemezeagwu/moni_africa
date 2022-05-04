@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:moni_africa/utils/app_assets.dart';
 import 'package:moni_africa/utils/extensions.dart';
 import 'package:moni_africa/utils/styles.dart';
 
@@ -14,13 +16,10 @@ Widget clusterPurseSettings(){
           children: [
             Row(
               children: [
-                Container(
+                SizedBox(
                   width: 16,
                   height: 16,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColors.grey
-                  ),
+                  child: SvgPicture.asset(AppAssets.nairaBadge),
                 ),
                 SizedBox(width: 8.w,),
                 Text("Cluster purse setting", style: boldBlack14,),
